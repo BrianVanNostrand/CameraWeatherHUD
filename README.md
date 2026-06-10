@@ -1,3 +1,11 @@
+# Intro
+
+This is a simple camera and weather monitoring HUD designed to be displayed on two monitors. It uses an array of arrays of camera property objects to display a set of 12 carousels containing cameras that are updated every 10 minutes.
+All cameras are URL endpoints to static image feeds.
+Similarly, weather information from OpenMeteo, tidal information from tidesandcurrents.noaa.gov, and weather radar gifs from https://radar.weather.gov/ridge/standard/ are also updated on a 10 minute interval.
+
+
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
