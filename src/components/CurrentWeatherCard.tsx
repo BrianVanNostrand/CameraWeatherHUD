@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from 'react'
 import { getMoonPhase } from '../utils/moonphase'
 
 const WEATHER_URL =
-  'https://api.open-meteo.com/v1/forecast?latitude=47.04&longitude=-122.90&current=temperature_2m,wind_speed_10m,wind_direction_10m,apparent_temperature,weathercode,us_aqi&hourly=rain,temperature_2m,precipitation_probability,snowfall&daily=sunrise,rain_sum,sunset&timezone=auto&temperature_unit=fahrenheit&wind_speed_unit=mph&precipitation_unit=inch'
+  'https://api.open-meteo.com/v1/forecast?latitude=47.04&longitude=-122.90&current=temperature_2m,wind_speed_10m,wind_direction_10m,apparent_temperature,weathercode,us_aqi&hourly=rain,temperature_2m,precipitation_probability,snowfall&daily=sunrise,rain_sum,sunset&timezone=auto&temperature_unit=fahrenheit&wind_speed_unit=mph&precipitation_unit=inch&models=ecmwf_ifs'
 
 /* ---------------- ICON ---------------- */
 function getWeatherIcon(code) {

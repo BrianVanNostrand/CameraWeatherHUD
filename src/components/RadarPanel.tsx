@@ -27,7 +27,7 @@ export default function RadarPanel( {name,url} : RadarInfo) {
     >
       <img
         key={version}
-        src={url}
+        src={`${url}?v=${version}`}
         style={{
           width: '100%',
           height: '100%',

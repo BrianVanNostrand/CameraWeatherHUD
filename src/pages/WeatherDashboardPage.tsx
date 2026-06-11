@@ -27,6 +27,20 @@ export default function WeatherPage() {
           gap: 18,
         }}
       >
+        <div id="rightcolumn"
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            gap: 18,
+            minWidth: 800,
+            margin: '0 auto'
+          }}
+        >
+          <CurrentWeatherCard />
+          <HourlyTimeline />
+          <DailyForecast />
+          <TideTable/>
+        </div>
         <Stack id="leftcolumn">
           <div
             id = "topRow"
@@ -52,20 +66,6 @@ export default function WeatherPage() {
             <RadarPanel url="https://radar.weather.gov/ridge/standard/SOUTHEAST_loop.gif" name='Washington'/>
           </div>
         </Stack >
-        <div id="rightcolumn"
-          style={{
-            display: 'flex',
-            flexDirection: 'column',
-            gap: 18,
-            minWidth: 800,
-            margin: '0 auto'
-          }}
-        >
-          <CurrentWeatherCard />
-          <HourlyTimeline />
-          <DailyForecast />
-          <TideTable/>
-        </div>
 
       </div>
 

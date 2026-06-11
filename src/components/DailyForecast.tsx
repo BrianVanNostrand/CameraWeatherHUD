@@ -3,7 +3,7 @@ import { getMoonPhase } from '../utils/moonphase'
 import { Stack } from '@mantine/core'
 
 const WEATHER_URL =
-'https://api.open-meteo.com/v1/forecast?latitude=47.04&longitude=-122.90&hourly=temperature_2m,precipitation_probability&daily=snowfall_sum,sunrise,sunset,weathercode,temperature_2m_max,temperature_2m_min&timezone=auto&temperature_unit=fahrenheit&precipitation_unit=inch&models=gfs_seamless'
+'https://api.open-meteo.com/v1/forecast?latitude=47.04&longitude=-122.90&hourly=temperature_2m,precipitation_probability&daily=precipitation_probability_max,snowfall_sum,sunrise,sunset,weathercode,temperature_2m_max,temperature_2m_min&timezone=auto&temperature_unit=fahrenheit&precipitation_unit=inch&models=ecmwf_ifs'
 
 /* ---------------- ICONS ---------------- */
 function getWeatherIcon(code) {
@@ -34,7 +34,7 @@ function getRainWindow(hourly, day) {
       end = i
     }
   }
-
+  console.log(start,end)
   if (start === null || end === null) return null
 
   return {
@@ -150,7 +150,7 @@ export default function DailyForecast() {
              H {Math.round(daily.temperature_2m_max[i])}° 
              L {Math.round(daily.temperature_2m_min[i])}°
             </div>
-
+              
             {/* METADATA ROW (LEFT → RIGHT FLOW) */}
             <MetaRow>
               <Stack>
